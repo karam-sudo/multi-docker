@@ -18,7 +18,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push kalhalabi/multi-client
+  - docker push --all-tags kalhalabi/multi-client
   - docker push kalhalabi/multi-nginx
   - docker push kalhalabi/multi-server
   - docker push kalhalabi/multi-worker
