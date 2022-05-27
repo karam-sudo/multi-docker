@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t kalhalabi/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t kalhalabi1/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true kalhalabi/react-test npm test
+  - docker run -e CI=true kalhalabi1/react-test npm test
 
 after_success:
   - docker build -t kalhalabi/multi-client ./client
